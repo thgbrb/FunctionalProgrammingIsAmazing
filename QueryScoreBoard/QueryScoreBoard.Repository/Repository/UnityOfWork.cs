@@ -26,7 +26,7 @@ namespace QueryScoreBoard.Repository.Repository
         public UnityOfWork()
         {
             //Desculpa ¯\_(ツ)_/¯
-            var connString = "";
+            var connString = "User Id=SQLMON;Password=sqlmon$adm;Host=10.51.3.41/dbsaude2;";
            
             _dbContext = new DbContextBase(new DbContextBaseBuilder()
                 .ConnectionString(connString)
@@ -41,6 +41,14 @@ namespace QueryScoreBoard.Repository.Repository
         public void Save()
         {
             _dbContext.SaveChanges();
+        }
+
+        public DbContext DbContext
+        {
+            get
+            {
+                return _dbContext;
+            }
         }
 
         public IGenericRepository<CheckinAnalysis> CheckinAnalysis

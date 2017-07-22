@@ -8,7 +8,7 @@ using System.Data;
 
 namespace QueryScoreBoard.Repository.Context
 {
-    public class DbContextBaseBuilder
+    internal class DbContextBaseBuilder
     {
         private readonly DbContextOptionsBuilder<DbContext> _builder;
 
