@@ -2,6 +2,7 @@
 {
     public class Sql : EntityBase
     {
+        public override int Id { get; set; }
         public int HisSQLId { get; set; }
         public string Text { get; set; }
         public Capture Capture { get; set; }

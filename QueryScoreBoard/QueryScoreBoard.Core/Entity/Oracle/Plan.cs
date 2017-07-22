@@ -5,6 +5,7 @@ namespace QueryScoreBoard.Core.Entity.Oracle
 {
     public class Plan : EntityBase
     {
+        public override int Id { get => base.Id; set => base.Id = value; }
         public long PlanId { get; set; }
         public long StatementId { get; set; }
         public int Instance { get; set; }

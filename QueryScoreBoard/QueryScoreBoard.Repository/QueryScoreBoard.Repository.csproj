@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Devart.Data.Oracle" Version="9.4.314" />
+    <PackageReference Include="Devart.Data.Oracle.EFCore" Version="9.4.314" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QueryScoreBoard.Core\QueryScoreBoard.Core.csproj" />
+  </ItemGroup>
+
+</Project>

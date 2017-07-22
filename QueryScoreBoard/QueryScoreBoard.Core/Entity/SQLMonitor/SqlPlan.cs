@@ -2,6 +2,7 @@
 {
     public class SqlPlan : EntityBase
     {
+        public override int Id { get; set; }
         public int SqlId { get; set; }
         public string OperationName { get; set; }
         public int OperationCost { get; set; }

@@ -2,6 +2,7 @@
 {
     public class ExecutionAnalysis : EntityBase
     {
+        public override int Id { get; set; }
         public int SqlId { get; set; }
         public int PlanCost { get; set; }
         public long? ExecutionDuration { get; set; }

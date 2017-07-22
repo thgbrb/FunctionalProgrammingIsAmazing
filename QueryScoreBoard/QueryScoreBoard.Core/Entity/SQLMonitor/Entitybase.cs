@@ -1,7 +1,7 @@
 ﻿namespace QueryScoreBoard.Core.Entity.SQLMonitor
 {
-    public class EntityBase
+    public abstract class EntityBase
     {
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
     }
 }
