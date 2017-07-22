@@ -8,7 +8,7 @@ namespace QueryScoreBoard.Tests
         [TestMethod]
         public void CreateContext()
         {
-            Repository.Repository.IUnitOfWork uow = new Repository.Repository.UnityOfWork();
+            Repository.Repository.IUnityOfWork uow = new Repository.Repository.UnityOfWork();
             var list = uow.Plan.FindAll();
             Assert.IsNotNull(list);
         }

@@ -30,7 +30,7 @@ namespace QueryScoreBoard.Repository.Repository
             _context.Set<TEntity>().Remove(FindBy(id));
         }
 
-        public IEnumerable<TEntity> FindAll()
+        public List<TEntity> FindAll()
         {
             return _context.Set<TEntity>().ToListAsync().Result;
         }
