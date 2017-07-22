@@ -6,7 +6,7 @@ namespace QueryScoreBoard.Analyzers
     /// <summary>
     /// Result of analyses
     /// </summary>
-    public class AnalyzeResult
+    public class AnalyzerResult
     {
         /// <summary>
         /// Sql Identification

@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QueryScoreBoard.Analyzer;
+using System.Linq;
 
 namespace QueryScoreBoard.Tests
 {
@@ -11,16 +12,16 @@ namespace QueryScoreBoard.Tests
         {
             // Arrange
 
-            var texto = $@"Select * from Alguma coisa Where teste.Id = ""Teste"" ";
-            var pattern = "select";
+            var sql = $@"SELECT DISTINCT * FROM TABELAILUMINATI WHERE A IN (1,2,3,4,5)";
+
 
             // Act
 
-            var count = new Analyse().Count(texto, pattern);
+            var count = new AnalyzerRunner().Execute(sql);
 
             // Assert
 
-            Assert.AreEqual(1, count);
+            Assert.AreEqual(1, count.Select(x => x.Count).Count());
         }
     }
 }

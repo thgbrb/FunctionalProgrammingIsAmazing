@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Analyzer.cs" />
-    <Compile Include="AnalyzeResult.cs" />
+    <Compile Include="AnalyzerRunner.cs" />
+    <Compile Include="AnalyzerResult.cs" />
     <Compile Include="MetricCountResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
