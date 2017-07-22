@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.openFileDialogSql = new System.Windows.Forms.OpenFileDialog();
-            this.btnAnalyse = new System.Windows.Forms.Button();
+            this.btnAnalyzer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openFileDialogSql
             // 
             this.openFileDialogSql.Filter = "*.sql|(*.sql)";
             // 
-            // btnAnalyse
+            // btnAnalyzer
             // 
-            this.btnAnalyse.Location = new System.Drawing.Point(12, 12);
-            this.btnAnalyse.Name = "btnAnalyse";
-            this.btnAnalyse.Size = new System.Drawing.Size(422, 23);
-            this.btnAnalyse.TabIndex = 0;
-            this.btnAnalyse.Text = "Analisar SQL...";
-            this.btnAnalyse.UseVisualStyleBackColor = true;
-            this.btnAnalyse.Click += new System.EventHandler(this.btnAnalyse_Click);
+            this.btnAnalyzer.Location = new System.Drawing.Point(12, 12);
+            this.btnAnalyzer.Name = "btnAnalyzer";
+            this.btnAnalyzer.Size = new System.Drawing.Size(422, 23);
+            this.btnAnalyzer.TabIndex = 0;
+            this.btnAnalyzer.Text = "Analisar SQL...";
+            this.btnAnalyzer.UseVisualStyleBackColor = true;
+            this.btnAnalyzer.Click += new System.EventHandler(this.btnAnalyzer_Click);
             // 
             // frmSqlAnalyzer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 48);
-            this.Controls.Add(this.btnAnalyse);
+            this.Controls.Add(this.btnAnalyzer);
             this.MaximizeBox = false;
             this.Name = "frmSqlAnalyzer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -63,7 +63,7 @@
         #endregion
 
         private System.Windows.Forms.OpenFileDialog openFileDialogSql;
-        private System.Windows.Forms.Button btnAnalyse;
+        private System.Windows.Forms.Button btnAnalyzer;
     }
 }
 

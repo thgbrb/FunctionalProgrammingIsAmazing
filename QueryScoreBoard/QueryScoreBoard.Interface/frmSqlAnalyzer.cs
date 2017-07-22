@@ -9,11 +9,11 @@ namespace QueryScoreBoard.Presentation
             InitializeComponent();
         }
 
-        private void btnAnalyse_Click(object sender, System.EventArgs e)
+        private void btnAnalyzer_Click(object sender, System.EventArgs e)
         {
             if (openFileDialogSql.ShowDialog() == DialogResult.OK)
             {
-
+                
             }
         }
     }
