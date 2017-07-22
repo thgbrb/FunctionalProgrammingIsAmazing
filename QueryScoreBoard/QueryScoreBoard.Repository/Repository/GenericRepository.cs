@@ -30,14 +30,14 @@ namespace QueryScoreBoard.Repository.Repository
             _context.Set<TEntity>().Remove(FindBy(id));
         }
 
-        public IEnumerable<TEntity> FindAll()
+        public List<TEntity> FindAll()
         {
-            return _context.Set<TEntity>().ToListAsync().Result;
+            return _context.Set<TEntity>().ToList();
         }
 
         public TEntity FindBy(long id)
         {
-            return _context.Set<TEntity>().FirstOrDefaultAsync(o => o.Id == id).Result;
+            return _context.Set<TEntity>().FirstOrDefault(o => o.Id == id);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace QueryScoreBoard.Repository.Repository
     {
         DbContext DbContext { get; }
         IGenericRepository<CheckinAnalysis> CheckinAnalysis { get; }
-        IGenericRepository<QueryScoreBoard.Core.Entity.SQLMonitor.Environment> Environment { get; }
+        IGenericRepository<Environment> Environment { get; }
         IGenericRepository<ExecutionAnalysis> ExecutionAnalysis { get; }
         IGenericRepository<Metric> Metric { get; }
         IGenericRepository<ScoreDetail> ScoreDetail { get; }
