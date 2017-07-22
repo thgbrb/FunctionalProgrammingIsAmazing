@@ -26,6 +26,7 @@ namespace QueryScoreBoard.Tests
             {
                 uow.Metric.Add(new Core.Entity.SQLMonitor.Metric
                 {
+                    Id = 1,
                     Description = "FAZ DISTINCT DOS DADOS",
                     Factor = 1,
                     Name = "DISTINCT"
@@ -35,11 +36,13 @@ namespace QueryScoreBoard.Tests
             {
                 uow.Metric.Add(new Core.Entity.SQLMonitor.Metric
                 {
+                    Id = 2,
                     Description = "FAZ UMA JUNÇÃO À ESQUERDA",
                     Factor = 1,
                     Name = "LEFT JOIN"
                 });
             }
+            uow.Save();
         }
 
         [TestMethod]
@@ -57,6 +60,7 @@ namespace QueryScoreBoard.Tests
                     Text = "SELECT * SM002_METRIC"
                 });
             }
+            uow.Save();
         }
 
         [TestMethod]

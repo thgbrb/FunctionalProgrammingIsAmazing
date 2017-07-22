@@ -26,7 +26,7 @@ namespace QueryScoreBoard.Domain
         public void CapturePlan(int sqlId)
         {
             var sql = _unityOfWork.Sql.FindBy(sqlId);
-            var command = string.Format("{0}{1}", EXPLAIN_PLAN, sql.Text);
+            var command = string.Format("{0} {1}", EXPLAIN_PLAN, sql.Text);
             _unityOfWork.DbContext.Database.ExecuteSqlCommand(command);
             var plan = _unityOfWork.Plan.FindAll();
             new SqlPlan(_unityOfWork).Save(sqlId, plan);

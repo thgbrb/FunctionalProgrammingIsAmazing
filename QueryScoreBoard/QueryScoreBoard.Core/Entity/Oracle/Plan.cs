@@ -11,37 +11,37 @@ namespace QueryScoreBoard.Core.Entity.Oracle
         public override int Id { get => base.Id; set => base.Id = value; }
 
         [Column("PLAN_ID")]
-        public long PlanId { get; set; }
+        public long? PlanId { get; set; }
 
         [Column("STATEMENT_ID")]
-        public long StatementId { get; set; }
+        public long? StatementId { get; set; }
 
         [Column("OBJECT_INSTANCE")]
-        public int Instance { get; set; }
+        public int? Instance { get; set; }
 
         [Column("SEARCH_COLUMNS")]
-        public int SearchColumns { get; set; }
+        public int? SearchColumns { get; set; }
 
         [Column("DEPTH")]
-        public int Depth { get; set; }
+        public int? Depth { get; set; }
 
         [Column("COST")]
-        public int Cost { get; set; }
+        public int? Cost { get; set; }
 
         [Column("CARDINALITY")]
-        public int Cardinality { get; set; }
+        public int? Cardinality { get; set; }
 
         [Column("BYTES")]
-        public int Bytes { get; set; }
+        public int? Bytes { get; set; }
 
         [Column("CPU_COST")]
-        public int CPUCost { get; set; }
+        public int? CPUCost { get; set; }
 
         [Column("IO_COST")]
-        public int IOCost { get; set; }
+        public int? IOCost { get; set; }
 
         [Column("TIME")]
-        public int Time { get; set; }
+        public int? Time { get; set; }
 
         [Column("REMARKS")]
         public string Remarks { get; set; }

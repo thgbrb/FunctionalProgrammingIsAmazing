@@ -1,10 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QueryScoreBoard.Core.Entity.SQLMonitor
 {
     [Table("SM002_METRIC")]
     public class Metric : EntityBase
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("SM002_METRIC_ID")]
         public override int Id { get; set; }
 

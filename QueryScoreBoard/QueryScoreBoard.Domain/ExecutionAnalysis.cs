@@ -14,10 +14,12 @@ namespace QueryScoreBoard.Domain
 
         public override void Save(int sqlId, List<Core.Entity.Oracle.Plan> plan)
         {
+            var random = new Random();
             _unityOfWork.ExecutionAnalysis.Add(new Core.Entity.SQLMonitor.ExecutionAnalysis
             {
+                Id = random.Next(0, 100),
                 ExecutionDuration = plan.Sum(o => o.Time),
-                PlanCost = plan.Sum(o => o.Cost),
+                PlanCost = plan.Sum(o => o.Cost ?? 0),
                 SqlId = sqlId
                 //Criar na tabela física o.CPUCost / o.IOCost
             });
