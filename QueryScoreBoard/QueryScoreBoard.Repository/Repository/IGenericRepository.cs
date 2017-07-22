@@ -8,6 +8,7 @@ namespace QueryScoreBoard.Repository.Repository
     {
         IEnumerable<TEntity> FindAll();
         TEntity FindBy(long id);
+        IEnumerable<TEntity> FindBy(Func<TEntity, bool> predicate);
         void Delete(long id);
         void Add(TEntity entity);
     }

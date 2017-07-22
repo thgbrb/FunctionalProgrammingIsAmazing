@@ -11,7 +11,8 @@ namespace QueryScoreBoard.Tests
         public void CreateContext()
         {
             QueryScoreBoard.Repository.Repository.IUnitOfWork uow = new Repository.Repository.UnityOfWork();
-            Assert.NotNull(uow.Metric);
+            var list = uow.Plan.FindAll();
+            Assert.NotNull(list);
         }
     }
 }
