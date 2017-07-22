@@ -17,6 +17,7 @@ namespace QueryScoreBoard.Tests
 
             // Act
 
+            // Simula recebimento de um texto sql
             var count = new AnalyzerRunner().Execute(sql);
 
             // Assert

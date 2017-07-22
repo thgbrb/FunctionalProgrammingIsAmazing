@@ -1,28 +1,36 @@
 ﻿using QueryScoreBoard.Analyzers;
 using QueryScoreBoard.Core.Entity.SQLMonitor;
+using QueryScoreBoard.Repository.Repository;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace QueryScoreBoard.Analyzer
 {
+    /// <summary>
+    /// Run an analysis given a sql
+    /// </summary>
     public class AnalyzerRunner
     {
-        public IList<MetricCountResult> Execute(string sqlText)
-        {
-            // Simula load de metricas
-            var metricList = new List<Metric>()
-            {
-                new Metric()
-                {
-                    Id = 1,
-                    Name = "distinct",
-                    Factor = 1,
-                    Description = "Count distincts"
-                }
-            };
+        /// <summary>
+        /// Receive an instance of Unit of Work
+        /// </summary>
+        private IUnityOfWork _unitOfWork;
 
-            return new AnalyzerRunner().Count(sqlText, metricList);
+        /// <summary>
+        /// Default ctor and IoC
+        /// </summary>
+        public AnalyzerRunner()
+        {
+            _unitOfWork = new UnityOfWork();
         }
+
+        /// <summary>
+        /// Execute the analisys
+        /// </summary>
+        /// <param name="sqlText">Sql text to analysis</param>
+        /// <returns>An analysis result</returns>
+        public IList<MetricCountResult> Execute(string sqlText) =>
+            new AnalyzerRunner().Count(sqlText, _unitOfWork.Metric.FindAll());
 
         /// <summary>
         /// Count words from a metric list given a sql text

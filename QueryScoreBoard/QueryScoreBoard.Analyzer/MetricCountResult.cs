@@ -1,5 +1,4 @@
 ﻿using QueryScoreBoard.Core.Entity.SQLMonitor;
-using System;
 
 namespace QueryScoreBoard.Analyzers
 {
