@@ -2,9 +2,9 @@
 {
     public class ScoreDetail : EntityBase
     {
-        public decimal CheckinAnalysisId { get; set; }
-        public decimal MetricId { get; set; }
-        public decimal CountMetric { get; set; }
-        public decimal Sum { get; set; }
+        public int CheckinAnalysisId { get; set; }
+        public int MetricId { get; set; }
+        public int CountMetric { get; set; }
+        public int Sum { get; set; }
     }
 }

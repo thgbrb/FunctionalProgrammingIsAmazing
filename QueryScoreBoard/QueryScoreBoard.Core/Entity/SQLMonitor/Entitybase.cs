@@ -2,6 +2,6 @@
 {
     public class EntityBase
     {
-        public decimal Id { get; set; }
+        public int Id { get; set; }
     }
 }
