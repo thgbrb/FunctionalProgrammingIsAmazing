@@ -23,7 +23,7 @@ namespace QueryScoreBoard.Domain
             _unityOfWork = unityOfWork;
         }
 
-        public void SaveExecutionPlan(int sqlId)
+        public void CapturePlan(int sqlId)
         {
             var sql = _unityOfWork.Sql.FindBy(sqlId);
             var command = string.Format("{0}{1}", EXPLAIN_PLAN, sql.Text);
