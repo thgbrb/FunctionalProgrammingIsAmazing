@@ -9,7 +9,7 @@ namespace QueryScoreBoard.Tests
         public void CreateContext()
         {
             Repository.Repository.IUnityOfWork uow = new Repository.Repository.UnityOfWork();
-            var list = uow.Environment.FindAll();
+            var list = uow.CheckinAnalysis.FindAll();
             Assert.IsNotNull(list);
         }
     }
