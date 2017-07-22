@@ -22,10 +22,7 @@ namespace QueryScoreBoard.Repository.Repository
 
         public UnityOfWork()
         {
-            //Desculpa ¯\_(ツ)_/¯
-            var connString = "User Id=SQLMON;Password=sqlmon$adm;Host=10.51.3.41/dbsaude2;";
-           
-            _dbContext = new DbContextBase(connString);
+            _dbContext = new DbContextBase();
         }
 
         public UnityOfWork(DbContext dbContext)

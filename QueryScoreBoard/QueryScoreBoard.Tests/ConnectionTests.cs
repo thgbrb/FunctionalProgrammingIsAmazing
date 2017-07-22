@@ -8,8 +8,8 @@ namespace QueryScoreBoard.Tests
         [TestMethod]
         public void CreateContext()
         {
-            Repository.Repository.IUnityOfWork uow = new Repository.Repository.UnityOfWork();
-            var list = uow.Plan.FindAll();
+            Repository.Repository.IUnitOfWork uow = new Repository.Repository.UnityOfWork();
+            var list = uow.Environment.FindAll();
             Assert.IsNotNull(list);
         }
     }

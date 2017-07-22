@@ -1,5 +1,6 @@
 ﻿using QueryScoreBoard.Core.Entity.Oracle;
 using QueryScoreBoard.Core.Entity.SQLMonitor;
+using System.Configuration;
 using System.Data.Entity;
 
 namespace QueryScoreBoard.Repository.Context
@@ -18,8 +19,19 @@ namespace QueryScoreBoard.Repository.Context
         public DbSet<TopTable> TopTable { get; set; }
         public DbSet<Plan> Plan { get; set; }
 
-        public DbContextBase(string connString = null) : base(connString)
+        public DbContextBase(string connString) : base(connString)
         {
+        }
+
+        public DbContextBase() : this(ConfigurationManager.ConnectionStrings["connString"].ToString())
+        {
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.HasDefaultSchema("SQLMON");
         }
     }
 }
