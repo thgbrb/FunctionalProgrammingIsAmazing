@@ -5,7 +5,7 @@ using System.Data.Entity;
 
 namespace QueryScoreBoard.Repository.Repository
 {
-    public class UnityOfWork : IUnitOfWork
+    public class UnityOfWork : IUnityOfWork
     {
         private readonly DbContext _dbContext;
         private IGenericRepository<CheckinAnalysis> _checkinAnalysis;

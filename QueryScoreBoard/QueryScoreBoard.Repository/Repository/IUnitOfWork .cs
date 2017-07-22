@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace QueryScoreBoard.Repository.Repository
 {
-    public interface IUnitOfWork
+    public interface IUnityOfWork
     {
         DbContext DbContext { get; }
         IGenericRepository<CheckinAnalysis> CheckinAnalysis { get; }
