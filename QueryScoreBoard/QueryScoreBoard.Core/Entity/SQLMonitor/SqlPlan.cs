@@ -1,7 +1,8 @@
 ﻿namespace QueryScoreBoard.Core.Entity.SQLMonitor
 {
-    public class SqlPlan : EntityBase
+    public class SqlPlan : IEntityBase
     {
+        public int Id { get; set; }
         public int SqlId { get; set; }
         public string OperationName { get; set; }
         public int OperationCost { get; set; }

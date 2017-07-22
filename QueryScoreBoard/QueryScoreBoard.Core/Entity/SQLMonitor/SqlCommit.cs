@@ -2,8 +2,9 @@
 
 namespace QueryScoreBoard.Core.Entity.SQLMonitor
 {
-    public class SqlCommit : EntityBase
+    public class SqlCommit : IEntityBase
     {
+        public int Id { get; set; }
         public int SqlId { get; set; }
         public string UserName { get; set; }
         public int TfsBranchId { get; set; }
