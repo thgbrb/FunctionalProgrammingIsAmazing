@@ -3,12 +3,12 @@
     /// <summary>
     /// Object result of an analize
     /// </summary>
-    public class CountResult
+    public class MetricCountResult
     {
         /// <summary>
         /// Text analized
         /// </summary>
-        public string Pattern { get; set; }
+        public int MetricId { get; set; }
         /// <summary>
         /// Number of text couting
         /// </summary>
