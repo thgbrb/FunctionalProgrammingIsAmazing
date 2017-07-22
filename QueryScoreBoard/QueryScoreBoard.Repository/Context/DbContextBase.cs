@@ -8,7 +8,7 @@ using QueryScoreBoard.Core.Entity.Oracle;
 
 namespace QueryScoreBoard.Repository.Context
 {
-    public class DbContextBase : DbContext
+    internal class DbContextBase : DbContext
     {
         public DbSet<CheckinAnalysis> CheckinAnalysis { get; set; }
         public DbSet<QueryScoreBoard.Core.Entity.SQLMonitor.Environment> Environment { get; set; }

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QueryScoreBoard.Core\QueryScoreBoard.Core.csproj" />
+    <ProjectReference Include="..\QueryScoreBoard.Repository\QueryScoreBoard.Repository.csproj" />
   </ItemGroup>
 
   <ItemGroup>
