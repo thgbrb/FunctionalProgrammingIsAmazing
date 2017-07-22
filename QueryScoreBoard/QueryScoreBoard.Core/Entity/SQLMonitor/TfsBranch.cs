@@ -1,8 +1,8 @@
 ﻿namespace QueryScoreBoard.Core.Entity.SQLMonitor
 {
-    public class TfsBranch : IEntityBase
+    public class TfsBranch : EntityBase
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public string Name { get; set; }
     }
 }

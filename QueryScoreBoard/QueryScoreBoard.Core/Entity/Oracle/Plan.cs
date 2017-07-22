@@ -3,9 +3,9 @@ using QueryScoreBoard.Core.Entity.SQLMonitor;
 
 namespace QueryScoreBoard.Core.Entity.Oracle
 {
-    public class Plan : IEntityBase
+    public class Plan : EntityBase
     {
-        public int Id { get; set; }
+        public override int Id { get => base.Id; set => base.Id = value; }
         public long PlanId { get; set; }
         public long StatementId { get; set; }
         public int Instance { get; set; }

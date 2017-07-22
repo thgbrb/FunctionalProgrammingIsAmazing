@@ -1,8 +1,8 @@
 ﻿namespace QueryScoreBoard.Core.Entity.SQLMonitor
 {
-    public class Environment: IEntityBase
+    public class Environment: EntityBase
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public string Description { get; set; }
     }
 }

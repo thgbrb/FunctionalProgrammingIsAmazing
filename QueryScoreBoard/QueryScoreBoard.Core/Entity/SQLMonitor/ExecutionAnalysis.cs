@@ -1,8 +1,8 @@
 ﻿namespace QueryScoreBoard.Core.Entity.SQLMonitor
 {
-    public class ExecutionAnalysis : IEntityBase
+    public class ExecutionAnalysis : EntityBase
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public int SqlId { get; set; }
         public int PlanCost { get; set; }
         public long? ExecutionDuration { get; set; }

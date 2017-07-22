@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QueryScoreBoard.Repository.Repository
 {
-    public class GenericRepository<TEntity> : Repository.IGenericRepository<TEntity> where TEntity : EntityBase
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : EntityBase
     {
         private readonly DbContext _context;
         private readonly DbSet<TEntity> _dbSet; 
