@@ -77,6 +77,10 @@
       <Project>{F002A16C-62BC-4F5A-9036-A637E651F79B}</Project>
       <Name>QueryScoreBoard.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\QueryScoreBoard.Domain\QueryScoreBoard.Domain.csproj">
+      <Project>{891DD448-3A9F-4E82-942B-42DE401C6003}</Project>
+      <Name>QueryScoreBoard.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QueryScoreBoard.Repository\QueryScoreBoard.Repository.csproj">
       <Project>{27659426-fb52-4f8a-88cf-3f0ae36304b1}</Project>
       <Name>QueryScoreBoard.Repository</Name>
