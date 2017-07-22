@@ -1,3 +1,4 @@
+using QueryScoreBoard.Analyzer;
 using System;
 using System.Text.RegularExpressions;
 using Xunit;
@@ -7,15 +8,18 @@ namespace QueryScoreBoard.Tests
     public class AnalyzerTests
     {
         [Fact]
-        public void TDD()
+        public void ShouldCountAWordPatternInAText()
         {
-            var teste = $@"Select * from Alguma coisa Where teste.Id = ""Teste"" ";
+            // Arrange
 
-            var pattern = "Select";
+            var texto = $@"Select * from Alguma coisa Where teste.Id = ""Teste"" ";
+            var pattern = "select";
 
-            var regex = new Regex(string.Format(@"\b{0}\b", teste), RegexOptions.IgnoreCase);
+            // Act
 
-            var count = regex.Matches(teste).Count;
+            var count = new Analyse().Count(texto, pattern);
+
+            // Assert
 
             Assert.Equal(1, count);
         }
