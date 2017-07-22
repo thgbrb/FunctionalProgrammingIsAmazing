@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryScoreBoard.Analyzer", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryScoreBoard.Tests", "QueryScoreBoard.Tests\QueryScoreBoard.Tests.csproj", "{A433A715-39A0-4D7D-AA23-97881D0A93E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryScoreBoard.Presentation", "QueryScoreBoard.Interface\QueryScoreBoard.Presentation.csproj", "{A8303D3C-F0BE-4843-A027-B2835B09E04D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{91867AC1-05B6-4C3E-9F68-20AC0D125E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91867AC1-05B6-4C3E-9F68-20AC0D125E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91867AC1-05B6-4C3E-9F68-20AC0D125E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8303D3C-F0BE-4843-A027-B2835B09E04D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8303D3C-F0BE-4843-A027-B2835B09E04D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8303D3C-F0BE-4843-A027-B2835B09E04D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8303D3C-F0BE-4843-A027-B2835B09E04D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5AFF5AB5-A234-4E82-80F0-9BFED53113F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5AFF5AB5-A234-4E82-80F0-9BFED53113F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AFF5AB5-A234-4E82-80F0-9BFED53113F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
