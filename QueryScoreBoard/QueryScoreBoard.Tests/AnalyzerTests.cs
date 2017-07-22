@@ -1,13 +1,12 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Text.RegularExpressions;
+using Xunit;
 
 namespace QueryScoreBoard.Tests
 {
-    [TestClass]
-    public class UnitTest1
+    public class AnalyzerTests
     {
-        [TestMethod]
+        [Fact]
         public void TDD()
         {
             var teste = $@"Select * from Alguma coisa Where teste.Id = ""Teste"" ";
@@ -18,7 +17,7 @@ namespace QueryScoreBoard.Tests
 
             var count = regex.Matches(teste).Count;
 
-            Assert.AreEqual(1, count);
+            Assert.Equal(1, count);
         }
     }
 }
