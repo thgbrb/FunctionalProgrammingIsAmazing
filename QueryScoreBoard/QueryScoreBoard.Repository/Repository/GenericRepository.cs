@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QueryScoreBoard.Core.Entity.SQLMonitor;
-using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QueryScoreBoard.Repository.Repository
 {
@@ -29,12 +26,12 @@ namespace QueryScoreBoard.Repository.Repository
 
         public IEnumerable<TEntity> FindAll()
         {
-            return _dbSet.ToListAsync<TEntity>().Result;
+            return _dbSet.ToListAsync().Result;
         }
 
         public TEntity FindBy(long id)
         {
-            return _dbSet.FirstOrDefaultAsync<TEntity>(o => o.Id == id).Result;
+            return _dbSet.FirstOrDefaultAsync(o => o.Id == id).Result;
         }
     }
 }
