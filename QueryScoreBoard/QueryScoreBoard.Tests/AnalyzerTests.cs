@@ -1,13 +1,12 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QueryScoreBoard.Analyzer;
-using System;
-using System.Text.RegularExpressions;
-using Xunit;
 
 namespace QueryScoreBoard.Tests
 {
+    [TestClass]
     public class AnalyzerTests
     {
-        [Fact]
+        [TestMethod]
         public void ShouldCountAWordPatternInAText()
         {
             // Arrange
@@ -21,7 +20,7 @@ namespace QueryScoreBoard.Tests
 
             // Assert
 
-            Assert.Equal(1, count);
+            Assert.AreEqual(1, count);
         }
     }
 }

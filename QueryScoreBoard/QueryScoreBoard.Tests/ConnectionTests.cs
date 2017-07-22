@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace QueryScoreBoard.Tests
 {
+    [TestClass]
     public class ConnectionTests
     {
-        [Fact]
+        [TestMethod]
         public void CreateContext()
         {
-            QueryScoreBoard.Repository.Repository.IUnitOfWork uow = new Repository.Repository.UnityOfWork();
+            Repository.Repository.IUnitOfWork uow = new Repository.Repository.UnityOfWork();
             var list = uow.Plan.FindAll();
-            Assert.NotNull(list);
+            Assert.IsNotNull(list);
         }
     }
 }

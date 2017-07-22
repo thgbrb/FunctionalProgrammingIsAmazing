@@ -1,10 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using QueryScoreBoard.Core.Entity.Oracle;
+﻿using QueryScoreBoard.Core.Entity.Oracle;
 using QueryScoreBoard.Core.Entity.SQLMonitor;
 using QueryScoreBoard.Repository.Context;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Data.Entity;
 
 namespace QueryScoreBoard.Repository.Repository
 {
@@ -28,9 +25,7 @@ namespace QueryScoreBoard.Repository.Repository
             //Desculpa ¯\_(ツ)_/¯
             var connString = "User Id=SQLMON;Password=sqlmon$adm;Host=10.51.3.41/dbsaude2;";
            
-            _dbContext = new DbContextBase(new DbContextBaseBuilder()
-                .ConnectionString(connString)
-                .Build());
+            _dbContext = new DbContextBase(connString);
         }
 
         public UnityOfWork(DbContext dbContext)

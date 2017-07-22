@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using QueryScoreBoard.Core.Entity.SQLMonitor;
-using System.Collections.Generic;
-using System.Linq;
+﻿using QueryScoreBoard.Core.Entity.SQLMonitor;
 using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 
 namespace QueryScoreBoard.Repository.Repository
 {

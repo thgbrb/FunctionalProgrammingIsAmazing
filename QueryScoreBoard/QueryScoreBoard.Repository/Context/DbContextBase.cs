@@ -1,17 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using JetBrains.Annotations;
+﻿using QueryScoreBoard.Core.Entity.Oracle;
 using QueryScoreBoard.Core.Entity.SQLMonitor;
-using QueryScoreBoard.Core.Entity.Oracle;
+using System.Data.Entity;
 
 namespace QueryScoreBoard.Repository.Context
 {
     internal class DbContextBase : DbContext
     {
         public DbSet<CheckinAnalysis> CheckinAnalysis { get; set; }
-        public DbSet<QueryScoreBoard.Core.Entity.SQLMonitor.Environment> Environment { get; set; }
+        public DbSet<Environment> Environment { get; set; }
         public DbSet<ExecutionAnalysis> ExecutionAnalysis { get; set; }
         public DbSet<Metric> Metric { get; set; }
         public DbSet<ScoreDetail> ScoreDetail { get; set; }
@@ -22,7 +18,7 @@ namespace QueryScoreBoard.Repository.Context
         public DbSet<TopTable> TopTable { get; set; }
         public DbSet<Plan> Plan { get; set; }
 
-        public DbContextBase(DbContextOptions options) : base(options)
+        public DbContextBase(string connString = null) : base(connString)
         {
         }
     }
